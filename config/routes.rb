@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'products/show'
+  get 'categories/index'
+  get 'categories/show'
+  get 'categories/home'
+  get 'categories/art'
+  get 'categories/garden'
   get 'pages/home'
   get 'pages/contact'
   get 'pages/about'
