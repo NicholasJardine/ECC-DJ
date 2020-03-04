@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/about'
   get 'pages/social_outreach'
+  get 'pages/cart'
   devise_for :users
   root to: 'pages#home'
 

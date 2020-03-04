@@ -1,12 +1,27 @@
 .navbar-lewagon {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   justify-content: space-between;
-  background: white;
+  background: #470938;
+  height: 72px;
 }
 
+.nav-link-color{
+  color: #f2d6eb;
+}
+.navbar-lewagon a:hover {
+  color: black;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  height: 100%;
+  width: 140px;
+}
+
+.btn-ghost{
+  color: #f2d6eb;
 }

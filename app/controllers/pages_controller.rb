@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+skip_before_action :authenticate_user!
+
   def home
   end
 
@@ -10,4 +12,10 @@ class PagesController < ApplicationController
 
   def social_outreach
   end
+
+  def cart
+    @product = Product.find(params[:id])
+    @items = []
+  end
+
 end

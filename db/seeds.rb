@@ -4,16 +4,16 @@ Category.destroy_all
 
 puts "creating categories"
 
-toys = Category.create!(title: 'Toys', photo: 'woodentoys.jpg', main: 'art')
-engravings = Category.create!(title: 'Engravings', photo: 'engravings.png', main: 'art')
-sculpture = Category.create!(title: 'Sculpture', photo: 'sculpture.jpeg', main: 'art')
-busts = Category.create!(title: 'Busts', photo: 'busts.jpg', main: 'art')
-veges = Category.create!(title: 'Vege-Patch and Planters', photo: 'vege-patch1.jpeg', main: 'garden')
-garden_furniture = Category.create!(title: 'Garden Furniture', photo: 'garden-furniture.jpeg', main: 'garden')
-garden_accessories = Category.create!(title: 'Garden Accessories', photo: 'garden-accessories.jpeg', main: 'garden')
-bedroom = Category.create!(title: 'Bedroom', photo: 'bedroom.jpg', main: 'home')
-bathroom = Category.create!(title: 'Bathroom', photo: 'bathroom.jpg', main: 'home')
-lounge = Category.create!(title: 'Lounge', photo: 'lounge.jpg', main: 'home')
+toys = Category.create!(title: 'Toys', pic: 'woodentoys.jpg', main: 'art')
+engravings = Category.create!(title: 'Engravings', pic: 'engravings.png', main: 'art')
+sculpture = Category.create!(title: 'Sculpture', pic: 'sculpture.jpeg', main: 'art')
+busts = Category.create!(title: 'Busts', pic: 'busts.jpg', main: 'art')
+veges = Category.create!(title: 'Vege-Patch and Planters', pic: 'vege-patch1.jpeg', main: 'garden')
+garden_furniture = Category.create!(title: 'Garden Furniture', pic: 'garden-furniture.jpeg', main: 'garden')
+garden_accessories = Category.create!(title: 'Garden Accessories', pic: 'garden-accessories.jpeg', main: 'garden')
+bedroom = Category.create!(title: 'Bedroom', pic: 'bedroom.jpg', main: 'home')
+bathroom = Category.create!(title: 'Bathroom', pic: 'bathroom.jpg', main: 'home')
+lounge = Category.create!(title: 'Lounge', pic: 'lounge.jpg', main: 'home')
 
 puts "#{Category.count} categories created"
 

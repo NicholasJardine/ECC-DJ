@@ -11,4 +11,41 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/navbar";
+@import "components/button";
+@import "components/card";
+@import "components/catcard";
+@import "components/product_show_card";
+@import "components/banner";
+@import "components/footer";
+
+
+
+
+
+
 @import "pages/index";
+.main-container{
+min-height: calc(100vh - 80px);
+background-color: black;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.category-container{
+  margin: 0 48px;
+  padding: 40px;
+}
