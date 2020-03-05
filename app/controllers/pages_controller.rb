@@ -14,8 +14,6 @@ skip_before_action :authenticate_user!
   end
 
   def cart
-    @product = Product.find(params[:id])
-    @items = []
   end
 
 end
