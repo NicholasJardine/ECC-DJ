@@ -1,6 +1,20 @@
 
 <div>
     <%= render 'shared/product_show_card' %>
+
+  <%= simple_form_for(@order_item) do |f| %>
+
+  <div class="form_inputs">
+    <div class="new-form-inputs">
+        <%= f.hidden_field :product_id , value: @product.id %>
+        <h5>@product.cost</h5>
+        <%= f.input :quantity, value: 1, min: 1, label: "quantity" %>
+        <%= f.submit "Add to cart", class: "btn btn-gradient" %>
+    </div>
+  </div>
+
+
+  <% end %>
 </div>
 
 <div>

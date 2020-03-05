@@ -10,15 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_04_170018) do
+ActiveRecord::Schema.define(version: 2020_03_04_213458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.string "pic"
     t.string "main"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "order_id"
+    t.float "unit_price"
+    t.integer "quantity"
+    t.float "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.float "subtotal"
+    t.float "total"
+    t.float "tax"
+    t.float "shipping"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_170018) do
     t.datetime "updated_at", null: false
     t.string "sub_category_name"
     t.boolean "ordered", default: false
+    t.float "cost"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
